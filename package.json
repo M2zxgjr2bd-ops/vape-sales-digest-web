@@ -1,0 +1,13 @@
+{
+  "name": "vape-sales-digest-vercel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node --version"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "openai": "^6.0.0"
+  }
+}
