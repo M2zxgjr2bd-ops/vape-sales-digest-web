@@ -31,13 +31,15 @@
 
 - `OPENAI_API_KEY`
 - `OPENAI_MODEL` 默认 `gpt-5-mini`
+- `OPENAI_TIMEOUT_MS` 默认 `45000`
 - `CRON_SECRET` 可选，但建议配上，用来保护后台接口
 
 说明：
 
 - `CRON_SECRET` 现在只用于受保护的后台接口
 - 不配 `OPENAI_API_KEY` 也能跑，但只会退回基础摘要版，不会有“通读正文后再总结”的效果
-- 新增 `MAX_DIGEST_ITEMS` 和 `MAX_ARTICLE_CHARS`，用于控制 AI 每次阅读多少篇候选文章、每篇读多长正文节选
+- 新增 `MAX_DIGEST_ITEMS` 和 `MAX_ARTICLE_CHARS`，用于控制抓取阶段保留多少候选、每篇抓多长正文节选
+- 新增 `OPENAI_ITEM_LIMIT` 和 `OPENAI_EXCERPT_CHARS`，用于控制真正送给 AI 的文章数量和每篇正文长度
 
 ## 部署步骤
 
